@@ -11,6 +11,7 @@ import NoteStep from './NoteStep'
 import AttachmentStep from './AttachmentStep'
 import GenericStep from './GenericStep'
 
+
 type StepComponent = React.FC<{ data: ProcessDetail; onRemove?: () => void }>
 
 const registry: Record<string, StepComponent> = {
