@@ -27,7 +27,7 @@ export function useAI() {
     setLoading(true);
 
     try {
-      // 🔹 MOCK (şimdilik)
+      // mock
       await new Promise((res) => setTimeout(res, 1000));
 
       setResponse(
