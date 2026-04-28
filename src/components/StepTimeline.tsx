@@ -7,6 +7,7 @@ import { icons } from "../lib/icons";
 import { getStatusMeta } from "../lib/status";
 import { AIDrawer } from "../components/AIDrawer";
 import { useAI } from "../hooks/useAI";
+import StepActionDropdown from "../components/StepActionDropdown";
 
 function getStatusBadge(status: string) {
   switch (status) {
@@ -135,6 +136,7 @@ export default function StepTimeline() {
   const { steps, removeStep } = useNodeStore();
   const { explain, activeStepTitle, isLoading } = useAIStore();
   const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
+  const [openActionIndex, setOpenActionIndex] = useState<number | null>(null);
 
   const { selectedStep, isOpen, response, loading, open, close, askAI } =
     useAI();
@@ -232,17 +234,19 @@ export default function StepTimeline() {
                     />
                   </div>
                   {/* + butonu */}
-                  <div className="flex items-center gap-2 px-5 py-1 ml-6">
-                    <div className="flex-1 h-px bg-border" />
-                    <button
+                  <div className="flex justify-center">
+                    {/* <div className="flex-1 h-px bg-border" /> */}
+                    {/* <button
                       onClick={() => setOpenModalIndex(index)}
                       className="w-6 h-6 rounded-full border border-border border-dashed cursor-pointer bg-card flex items-center justify-center text-muted-foreground hover:text-blue-400 hover:border-blue-400 transition-all duration-300 text-sm group"
                     >
                       <span className="inline-block transition-transform duration-300 group-hover:rotate-90">
                         +
                       </span>
-                    </button>
-                    <div className="flex-1 h-px bg-border" />
+                    </button> */}
+                    <StepActionDropdown index={index} />
+
+                    {/* <div className="flex-1 h-px bg-border" /> */}
                   </div>
                 </div>
               </div>
