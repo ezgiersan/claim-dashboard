@@ -33,20 +33,6 @@ export function useAI() {
       setResponse(
         `${selectedStep.title} adımı AI tarafından analiz edildi. Bu adım süreçte kritik bir rol oynar.`
       );
-
-      // 🔥 GERÇEK API (istersen açarsın)
-      /*
-      const res = await fetch("/api/ai-explain", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(selectedStep),
-      });
-
-      const data = await res.json();
-      setResponse(data.result);
-      */
     } catch (error) {
       setResponse("Bir hata oluştu.");
     } finally {

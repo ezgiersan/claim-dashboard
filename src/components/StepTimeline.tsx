@@ -139,7 +139,7 @@ export default function StepTimeline() {
   const { selectedStep, isOpen, response, loading, open, close, askAI } =
     useAI();
 
-    const ChevronRight = icons["ChevronRight"]
+  const ChevronRight = icons["ChevronRight"];
   return (
     <div className="flex flex-col gap-2">
       <div className="rounded-xl overflow-hidden">
@@ -218,7 +218,7 @@ export default function StepTimeline() {
                           className="text-xs flex items-center gap-1 rounded-md px-2 py-1 text-gray-500 cursor-pointer"
                         >
                           AI ile aç
-                         <ChevronRight size={20}/>
+                          <ChevronRight size={20} />
                         </button>
                       )}
                     </div>
