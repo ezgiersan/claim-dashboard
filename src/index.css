@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --bg-page: #1f2430;
+}
+@theme {
+    --color-card: #080f18;
+    --text-color: #eaeaea;
+    --color-warning-bg: #614743;
+    --color-warning-border: #ffb114;
+    --color-warning-text: #ffb114;
+    --color-badge-success: #002a15;
+    --color-badge-success-text: #0a9d53;
+    --color-badge-blue: #0c1c47;
+    --color-badge-blue-text: #6782ff;
+    --color-badge-gray: #212121;
+    --color-badge-gray-text: #575757;
+    --color-progress-blue: #3722a4;
+    --color-button-gray: #818181;
+    
+}
+body {
+  background-color: var(--bg-page);
+  color: var(--text-color);
+}
+@keyframes slide-in-right {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.25s ease-out;
+  }
